@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../estilos/estilos.css">
+    <title>BOXit</title>
+</head>
+
+<body id="bodyContacto">
+    <!--inicio header-->
+    <header>
+        <a href="../index.html">
+            <img src="../img/logo.png" class="logo">
+        </a>
+        <nav>
+            <ul>
+                <li>
+                    <a href="../index.html">Inicio</a>
+                </li>
+                <li>
+                    <a href="nosotros.html">Nosotros</a>
+                </li>
+                <li>
+                    <a href="boxdulces.html">Box Dulces</a>
+                </li>
+                <li>
+                    <a href="boxbebidas.html">Box Bebidas</a>
+                </li>
+                <li>
+                    <a href="envios.html">Envíos</a>
+                </li>
+                <li>
+                    <a href="contacto.html">Contacto</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!--fin header-->
+    <!--inicio main-->
+    <main id="mainContacto">
+        <form>
+            <p class="textoSubtitulos">Para ponerse en contacto con el equipo de BOXit, por favor complete el siguiente formulario:</p> <br>
+            <label for="nombre_apellido" class="textoDescriptivoNos">Nombre y Apellido</label>
+            <input type="text" name="nombre_apellido"/> <br>
+            <label for="telefono" class="textoDescriptivoNos">Teléfono</label>
+            <input type="text" name="telefono"/> <br>
+            <label for="correo" class="textoDescriptivoNos">Correo electrónico</label>
+            <input type="text" name="correo"/> <br>
+            <label for="pedido" class="textoDescriptivoNos">Número de pedido</label>
+            <input type="text" name="pedido"/> <br>
+            <div class="textoDescriptivoNos">Tipo de consulta:</div>
+            <select name="consulta" class="margenBoton">
+                <option value="envios" class="textoDescriptivoNos">Envíos</option>
+                <option value="poxes" class="textoDescriptivoNos">Boxes</option>
+                <option value="pedido" class="textoDescriptivoNos">Pedido realizado</option>
+                <option value="otro" class="textoDescriptivoNos">Otro</option> <br>
+            </select>
+            <div class="textoDescriptivoNos">¿Cómo prefiere ser contactado?</div>
+            <div class="textoDescriptivoNos">Teléfono</div>
+            <input type="radio" name="forma_contacto" value="telefono" class="margenBoton"/>
+            <div class="textoDescriptivoNos">Correo electrónico</div>
+            <input type="radio" name="forma_contacto" value="correo" class="margenBoton"/> <br>
+            <div class="textoDescriptivoNos"> Acepta términos y condiciones</div>
+            <input type="checkbox" name="acepta_tyc" value="1" class="margenBoton"/> <br>
+            <input type="submit" value="Enviar formulario" class="textoDescriptivoNos"/>
+            <input type="reset" value="Borrar información" class="textoDescriptivoNos"/>
+        </form>
+    </main>
+    <!--fin main-->
+    <!--inicio footer-->
+    <footer>
+        <p class="textoFooter">Síguenos en Instagram: @BOXit.es</p>
+    </footer>
+    <!--fin footer-->
+</body>
+
+</html>
