@@ -29,16 +29,24 @@ li{
 a{
    text-decoration: none;
    font-family: 'Lato', sans-serif;
-   font-size: 20px;
    font-weight: 400;
    color: rgb(109, 106, 106);
    padding: 15px;
    margin-left: 10px;
    margin-right: 10px;
+   
+}
+nav ul li:hover{
+   transform: scale(1.1);
+   transition: all 0.5s;
 }
 .logo{
    width: 75px;
    height: 75px;
+   transition: all 1s;
+}
+.logo:hover{
+   transform: rotate(360deg);
 }
 /*inicio MAIN*/
 main{
@@ -47,17 +55,13 @@ main{
 }
 /*Banner Principal / Hero */
 .bannerPrincipal{
-   height: 400px;
    background-image: url(../img/fotoBanner2.jpg);
    background-size:cover;
    background-position: center center;
 }
 .textoBanner{
    position: relative;
-   top: 280px;
-   margin-left: 15px;
    font-family: 'Lato', sans-serif;
-   font-size: 30px;
    font-weight: 900;
    color: white;
 }
@@ -65,7 +69,6 @@ main{
 .textoCategorias{
    text-align: center;
    font-family: 'Lato', sans-serif;
-   font-size: 25px;
    font-weight: 700;
    color: rgb(26, 25, 25);
    margin-top: 10px;
@@ -85,7 +88,6 @@ main{
    border-radius: 15px;
 }
 .button{
-   background-color: rgb(214, 178, 158);
    border-radius: 15px;
    border: 0ch;
    font-family: 'Lato', sans-serif;
@@ -93,16 +95,22 @@ main{
    margin: 3px;
    width: auto;
    cursor: pointer;
+   transition: all 0.5s;
+   background: rgba(214,178,158,1);
+   color: white;
+}
+.button:hover{
+   transform: scale(1.1);
+   background:rgb(168, 182, 201);
+   color: black;
 }
 .textoTituloCategoria{
    font-family: 'Lato', sans-serif;
-   font-size: 20px;
    font-weight: 700;
    color: rgb(26, 25, 25);
 }
 .textoDescriptivo{
    font-family: 'Lato', sans-serif;
-   font-size: 18px;
    font-weight: 400;
    color: rgb(26, 25, 25);
    margin-bottom: 5px;  
@@ -110,7 +118,6 @@ main{
 /*Sección Nosotros*/
 .textoSubtitulos{
    font-family: 'Lato', sans-serif;
-   font-size: 25px;
    font-weight: 700;
    color: rgb(26, 25, 25);
    margin-top: 5px;
@@ -118,7 +125,6 @@ main{
 }
 .textoDescriptivoNos{
    font-family: 'Lato', sans-serif;
-   font-size: 18px;
    font-weight: 400;
    color: rgb(26, 25, 25);
    margin-bottom: 5px;
@@ -126,9 +132,6 @@ main{
 }
 /*Secciones BoxBebidas y BoxDulces*/
 .fotoModelos{
-   width: 300px;
-   height: 300px;
-   border-radius: 20px;
    display: block;
    margin: auto;
 }
@@ -140,26 +143,36 @@ main{
 }
 .detalleModelos{
    font-family: 'Lato', sans-serif;
-   font-size: 20px;
    font-weight: 400;
    color: rgb(26, 25, 25);
 }
 .subtituloModelos{
    font-family: 'Lato', sans-serif;
-   font-size: 18px;
    font-weight: 700;
    color: rgb(26, 25, 25);
 }
 .descripcionModelos{
    font-family: 'Lato', sans-serif;
-   font-size: 18px;
    font-weight: 400;
    color: rgb(26, 25, 25);
 }
+.button2{
+   border-radius: 5px;
+   border: 0ch;
+   font-family: 'Lato', sans-serif;
+   padding: 4px;
+   margin: 3px;
+   width: auto;
+   cursor: pointer;
+   background:linear-gradient(to right, rgba(99, 93, 190, 0.733), rgb(168, 182, 201));
+   transition: all 0.2s;
+   color: black;
+}
+.button2:hover{
+   transform: scale(1.1);
+}
 /*Sección envíos*/
 .mapa{
-   width: 400px;
-   height: 400px;
    display: block;
    margin: auto;
    margin-bottom: 10px;
@@ -172,6 +185,23 @@ main{
 .figCaption{
    text-align: center;
    margin-bottom: 15px;
+}
+/*Sección contacto*/
+.buttonC{
+   border-radius: 5px;
+   border: 0ch;
+   font-family: 'Lato', sans-serif;
+   padding: 4px;
+   margin: 3px;
+   width: auto;
+   cursor: pointer;
+   background-color: rgb(168, 182, 201);
+   transition: all 0.2s;
+   color: black;
+}
+.buttonC:hover{
+   transform: scale(1.1);
+   background:rgba(99, 93, 190, 0.733); 
 }
 /*Inicio FOOTER*/
 footer{
@@ -186,7 +216,9 @@ footer{
    color: rgb(26, 25, 25); 
    margin-left: 10px;   
 }
-
+/*----------------------------------------
+                  GRIDS
+----------------------------------------*/
 /*GRID index*/
 /*Definicion de áreas*/
 main {
@@ -359,412 +391,258 @@ main#mainContacto{
    grid-template-columns: 1fr;
    align-items: center;
 }
-
-/*Media Query*/
+/*----------------------------------------
+               MEDIA QUERY
+----------------------------------------*/
 /*Smartphone*/
 @media(max-width:480px){
    /*Inicio HEADER*/
    a{
-       font-size: 16px;
-       padding: 3px;
-       margin-left: 0px;
-       margin-right: 0px;
+      font-size: 16px;
+      padding: 3px;
+      margin-left: 0px;
+      margin-right: 0px;
    }
    .logo{
-       width: 50px;
-       height: 50px;
+      width: 50px;
+      height: 50px;
    }
-  /*inicio MAIN*/
-  main{
-   min-height: calc(100vh - 160px);
-   margin-top: 90px;
+   /*inicio MAIN*/
+   main{
+      min-height: calc(100vh - 160px);
+      margin-top: 90px;
    }
    /*Banne Principal / Hero */
    .bannerPrincipal{
-       height: 200px;
-       background-image: url(../img/fotoBanner2.jpg);
-       background-size:cover;
-       background-position: center center;
+      height: 200px;
    }
    .textoBanner{
-       position: relative;
-       top: 140px;
-       margin-left: 5px;
-       font-family: 'Lato', sans-serif;
-       font-size: 16px;
-       font-weight: 900;
-       color: white;
+      top: 140px;
+      margin-left: 5px;
+      font-size: 16px;
    }
    /*Categorias página principal*/
    .textoCategorias{
-       text-align: center;
-       font-family: 'Lato', sans-serif;
-       font-size: 18px;
-       font-weight: 700;
-       color: rgb(26, 25, 25);
-       margin-top: 10px;
-       margin-bottom: 10px;
+      font-size: 18px;
    }
    .fotoCategorias{
-       width: 150px;
-       height: 150px;
-       border-radius: 5px;
+      width: 150px;
+      height: 150px;
+      border-radius: 10px;
    }
    .button{
-       background-color: rgb(214, 178, 158);
-       border-radius: 15px;
-       border: 0ch;
-       font-family: 'Lato', sans-serif;
        font-size: 12px;
-       padding: 4px;
-       margin: 3px;
-       width: auto;
-       cursor: pointer;
    }
    .textoTituloCategoria{
-       font-family: 'Lato', sans-serif;
-       font-size: 16px;
-       font-weight: 700;
-       color: rgb(26, 25, 25);
+      font-size: 16px;
    }
    .textoDescriptivo{
-       font-family: 'Lato', sans-serif;
-       font-size: 16px;
-       font-weight: 400;
-       color: rgb(26, 25, 25);
-       margin-bottom: 5px;
-       width: 150px;  
+      font-size: 16px;
+      width: 150px;  
    }
    /*Sección Nosotros-contacto*/
    .textoSubtitulos{
-       font-family: 'Lato', sans-serif;
-       font-size: 18px;
-       font-weight: 700;
-       color: rgb(26, 25, 25);
-       margin-top: 5px;
-       margin-left: 10px;
+      font-size: 18px;
    }
    .textoDescriptivoNos{
-       font-family: 'Lato', sans-serif;
-       font-size: 16px;
-       font-weight: 400;
-       color: rgb(26, 25, 25);
-       margin-bottom: 5px;
-       margin-left: 10px;  
+      font-size: 16px;  
 }
    /*Secciones BoxBebidas y BoxDulces*/
    .fotoModelos{
-       width: 150px;
-       height: 150px;
-       border-radius: 20px;
-       display: block;
-       margin: auto;
+      width: 150px;
+      height: 150px;
+      border-radius: 10px;
    }
    .tituloModelos{
-       font-family: 'Lato', sans-serif;
-       font-size: 18px;
-       font-weight: 700;
-       color: rgb(26, 25, 25);
+      font-size: 18px;
    }
    .detalleModelos{
-       font-family: 'Lato', sans-serif;
-       font-size: 16px;
-       font-weight: 400;
-       color: rgb(26, 25, 25);
+      font-size: 16px;
    }
    .subtituloModelos{
-       font-family: 'Lato', sans-serif;
-       font-size: 16px;
-       font-weight: 700;
-       color: rgb(26, 25, 25);
+      font-size: 16px;
    }
    .descripcionModelos{
-       font-family: 'Lato', sans-serif;
-       font-size: 16px;
-       font-weight: 400;
-       color: rgb(26, 25, 25);
+      font-size: 16px;
+   }
+   .button2{
+      font-size: 12px;
    }
    /*Sección envíos*/
    .mapa{
-       width: 200px;
-       height: 200px;
-       display: block;
-       margin: auto;
-       margin-bottom: 10px;
-       margin-top: 10px;
-       border-radius: 20px;
+      width: 200px;
+      height: 200px;
+   }
+   /*Sección contacto*/
+   .buttonC{
+      font-size: 12px;
    }
 }
 /*Tablet*/
 @media(min-width:481px){
   /*Inicio HEADER*/
   a{
-   font-size: 18px;
-   padding: 3px;
-   margin-left: 0px;
-   margin-right: 0px;
+      font-size: 18px;
+      padding: 3px;
+      margin-left: 0px;
+      margin-right: 0px;
 }
-.logo{
-   width: 65px;
-   height: 65px;
-}
-/*inicio MAIN*/
-main{
-min-height: calc(100vh - 180px);
-margin-top: 110px;
-}
-/*Banne Principal / Hero */
-.bannerPrincipal{
-   height: 300px;
-   background-image: url(../img/fotoBanner2.jpg);
-   background-size:cover;
-   background-position: center center;
-}
-.textoBanner{
-   position: relative;
-   top: 230px;
-   margin-left: 5px;
-   font-family: 'Lato', sans-serif;
-   font-size: 18px;
-   font-weight: 900;
-   color: white;
-}
-/*Categorias página principal*/
-.textoCategorias{
-   text-align: center;
-   font-family: 'Lato', sans-serif;
-   font-size: 20px;
-   font-weight: 700;
-   color: rgb(26, 25, 25);
-   margin-top: 10px;
-   margin-bottom: 10px;
-}
-.fotoCategorias{
-   width: 225px;
-   height: 225px;
-   border-radius: 5px;
-}
-.button{
-   background-color: rgb(214, 178, 158);
-   border-radius: 15px;
-   border: 0ch;
-   font-family: 'Lato', sans-serif;
-   font-size: 14px;
-   padding: 4px;
-   margin: 3px;
-   width: auto;
-   cursor: pointer;
-}
-.textoTituloCategoria{
-   font-family: 'Lato', sans-serif;
-   font-size: 18px;
-   font-weight: 700;
-   color: rgb(26, 25, 25);
-}
-.textoDescriptivo{
-   font-family: 'Lato', sans-serif;
-   font-size: 18px;
-   font-weight: 400;
-   color: rgb(26, 25, 25);
-   margin-bottom: 5px;
-   width: 225px;  
-}
-/*Sección Nosotros-contacto*/
-.textoSubtitulos{
-   font-family: 'Lato', sans-serif;
-   font-size: 20px;
-   font-weight: 700;
-   color: rgb(26, 25, 25);
-   margin-top: 5px;
-   margin-left: 10px;
-}
-.textoDescriptivoNos{
-   font-family: 'Lato', sans-serif;
-   font-size: 18px;
-   font-weight: 400;
-   color: rgb(26, 25, 25);
-   margin-bottom: 5px;
-   margin-left: 10px;  
-}
-/*Secciones BoxBebidas y BoxDulces*/
-.fotoModelos{
-   width: 225px;
-   height: 225px;
-   border-radius: 20px;
-   display: block;
-   margin: auto;
-}
-.tituloModelos{
-   font-family: 'Lato', sans-serif;
-   font-size: 20px;
-   font-weight: 700;
-   color: rgb(26, 25, 25);
-}
-.detalleModelos{
-   font-family: 'Lato', sans-serif;
-   font-size: 18px;
-   font-weight: 400;
-   color: rgb(26, 25, 25);
-}
-.subtituloModelos{
-   font-family: 'Lato', sans-serif;
-   font-size: 18px;
-   font-weight: 700;
-   color: rgb(26, 25, 25);
-}
-.descripcionModelos{
-   font-family: 'Lato', sans-serif;
-   font-size: 18px;
-   font-weight: 400;
-   color: rgb(26, 25, 25);
-}
-/*Sección envíos*/
-.mapa{
-   width: 300px;
-   height: 300px;
-   display: block;
-   margin: auto;
-   margin-bottom: 10px;
-   margin-top: 10px;
-   border-radius: 20px;
-}
+   .logo{
+      width: 65px;
+      height: 65px;
+   }
+   /*inicio MAIN*/
+   main{
+      min-height: calc(100vh - 180px);
+      margin-top: 110px;
+   }
+   /*Banner Principal / Hero */
+   .bannerPrincipal{
+      height: 300px;
+   }
+   .textoBanner{
+      top: 230px;
+      margin-left: 5px;
+      font-size: 18px;
+   }
+   /*Categorias página principal*/
+   .textoCategorias{
+      font-size: 20px;
+   }
+   .fotoCategorias{
+      width: 225px;
+      height: 225px;
+      border-radius: 5px;
+   }
+   .button{
+      font-size: 14px;
+   }
+   .textoTituloCategoria{
+      font-size: 18px;
+   }
+   .textoDescriptivo{
+      font-size: 18px;
+      width: 225px;  
+   }
+   /*Sección Nosotros-contacto*/
+   .textoSubtitulos{
+      font-size: 20px;
+   }
+   .textoDescriptivoNos{
+      font-size: 18px;  
+   }
+   /*Secciones BoxBebidas y BoxDulces*/
+   .fotoModelos{
+      width: 225px;
+      height: 225px;
+      border-radius: 15px;
+   }
+   .tituloModelos{
+      font-size: 20px;
+   }
+   .detalleModelos{
+      font-size: 18px;
+   }
+   .subtituloModelos{
+      font-size: 18px;
+   }
+   .descripcionModelos{
+      font-size: 18px;
+   }
+   .button2{
+      font-size: 14px;
+   }
+   /*Sección envíos*/
+   .mapa{
+      width: 300px;
+      height: 300px;
+   }
+   /*Sección contacto*/
+   .buttonC{
+      font-size: 14px;
+   }
 }
 /*Desktop*/
 @media(min-width:781px){
    /*Inicio HEADER*/
    a{
-       text-decoration: none;
-       font-family: 'Lato', sans-serif;
-       font-size: 20px;
-       font-weight: 400;
-       color: rgb(109, 106, 106);
-       padding: 15px;
-       margin-left: 10px;
-       margin-right: 10px;
+      font-size: 20px;
+      padding: 15px;
+      margin-left: 10px;
+      margin-right: 10px;
    }
    .logo{
-       width: 75px;
-       height: 75px;
+      width: 75px;
+      height: 75px;
    }
-/*inicio MAIN*/
-main{
-   min-height: calc(100vh - 185px);
-   margin-top: 120px;
-}
-/*Banne Principal / Hero */
-.bannerPrincipal{
-   height: 400px;
-   background-image: url(../img/fotoBanner2.jpg);
-   /*background-repeat: no-repeat;*/
-   background-size:cover;
-   background-position: center center;
-}
-.textoBanner{
-   position: relative;
-   top: 280px;
-   margin-left: 15px;
-   /*text-align: center;*/
-   font-family: 'Lato', sans-serif;
-   font-size: 30px;
-   font-weight: 900;
-   color: white;
-}
-/*Categorias página principal*/
-.textoCategorias{
-   text-align: center;
-   font-family: 'Lato', sans-serif;
-   font-size: 25px;
-   font-weight: 700;
-   color: rgb(26, 25, 25);
-   margin-top: 10px;
-   margin-bottom: 10px;
-}
-.fotoCategorias{
-   width: 300px;
-   height: 300px;
-   border-radius: 15px;
-}
-.button{
-   background-color: rgb(214, 178, 158);
-   border-radius: 15px;
-   border: 0ch;
-   font-family: 'Lato', sans-serif;
-   padding: 4px;
-   margin: 3px;
-   width: auto;
-   cursor: pointer;
-}
-.textoTituloCategoria{
-   font-family: 'Lato', sans-serif;
-   font-size: 20px;
-   font-weight: 700;
-   color: rgb(26, 25, 25);
-}
-.textoDescriptivo{
-   font-family: 'Lato', sans-serif;
-   font-size: 20px;
-   font-weight: 400;
-   color: rgb(26, 25, 25);
-   margin-bottom: 5px;
-   width: 225px;  
-}
-/*Sección Nosotros-contacto*/
-.textoSubtitulos{
-   font-family: 'Lato', sans-serif;
-   font-size: 22px;
-   font-weight: 700;
-   color: rgb(26, 25, 25);
-   margin-top: 5px;
-   margin-left: 10px;
-}
-.textoDescriptivoNos{
-   font-family: 'Lato', sans-serif;
-   font-size: 20px;
-   font-weight: 400;
-   color: rgb(26, 25, 25);
-   margin-bottom: 5px;
-   margin-left: 10px;  
-}
-/*Secciones BoxBebidas y BoxDulces*/
-.fotoModelos{
-   width: 300px;
-   height: 300px;
-   border-radius: 20px;
-   display: block;
-   margin: auto;
-}
-.tituloModelos{
-   font-family: 'Lato', sans-serif;
-   font-size: 22px;
-   font-weight: 700;
-   color: rgb(26, 25, 25);
-}
-.detalleModelos{
-   font-family: 'Lato', sans-serif;
-   font-size: 20px;
-   font-weight: 400;
-   color: rgb(26, 25, 25);
-}
-.subtituloModelos{
-   font-family: 'Lato', sans-serif;
-   font-size: 20px;
-   font-weight: 700;
-   color: rgb(26, 25, 25);
-}
-.descripcionModelos{
-   font-family: 'Lato', sans-serif;
-   font-size: 20px;
-   font-weight: 400;
-   color: rgb(26, 25, 25);
-}
-/*Sección envíos*/
-.mapa{
-   width: 400px;
-   height: 400px;
-   display: block;
-   margin: auto;
-   margin-bottom: 10px;
-   margin-top: 10px;
-   border-radius: 20px;
-}
+   /*inicio MAIN*/
+   main{
+      min-height: calc(100vh - 185px);
+      margin-top: 140px;
+   }
+   /*Banne Principal / Hero */
+   .bannerPrincipal{
+      height: 400px;
+   }
+   .textoBanner{
+      top: 280px;
+      margin-left: 15px;
+      font-size: 30px;
+   }
+   /*Categorias página principal*/
+   .textoCategorias{
+      font-size: 25px;
+   }
+   .fotoCategorias{
+      width: 300px;
+      height: 300px;
+      border-radius: 15px;
+   }
+   .button{
+      font-size: 16px;
+   }
+   .textoTituloCategoria{
+      font-size: 20px;
+   }
+   .textoDescriptivo{
+      font-size: 20px;
+      width: 300px;  
+   }
+   /*Sección Nosotros-contacto*/
+   .textoSubtitulos{
+      font-size: 22px;
+   }
+   .textoDescriptivoNos{
+      font-size: 20px; 
+   }
+   /*Secciones BoxBebidas y BoxDulces*/
+   .fotoModelos{
+      width: 300px;
+      height: 300px;
+      border-radius: 20px;
+   }
+   .tituloModelos{
+      font-size: 22px;
+   }
+   .detalleModelos{
+      font-size: 20px;
+   }
+   .subtituloModelos{
+      font-size: 20px;
+   }
+   .descripcionModelos{
+      font-size: 20px;
+   }
+   .button2{
+      font-size: 16px;
+   }
+   /*Sección envíos*/
+   .mapa{
+      width: 400px;
+      height: 400px;
+   }
+   /*Sección contacto*/
+   .buttonC{
+      font-size: 16px;
+   }
 }
