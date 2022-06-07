@@ -54,16 +54,27 @@ main{
    margin-top: 120px;
 }
 /*Banner Principal / Hero */
-.bannerPrincipal{
-   background-image: url(../img/fotoBanner2.jpg);
+.bannerBackground{
    background-size:cover;
    background-position: center center;
+}
+
+.image1{
+   background-image: url(../img/fotoBanner1.jpg);
+}
+
+.image2{
+   background-image: url(../img/fotoBanner2.jpg);
+}
+.image3{
+   background-image: url(../img/fotoBanner3.jpg);
 }
 .textoBanner{
    position: relative;
    font-family: 'Lato', sans-serif;
    font-weight: 900;
    color: white;
+   line-height: 70%;
 }
 /*Categorias página principal*/
 .textoCategorias{
@@ -78,14 +89,15 @@ main{
    display: flex;
    flex-direction: column;
    text-align: center;
-   border-radius: 15px;
+   border-radius: 16px;
    align-items: center;
+   margin-bottom: 10px;
    
 }
 .fotoCategorias{
    width: 300px;
    height: 300px;
-   border-radius: 15px;
+   /*border-radius: 15px;*/
 }
 .button{
    border-radius: 15px;
@@ -202,6 +214,9 @@ main{
 .buttonC:hover{
    transform: scale(1.1);
    background:rgba(99, 93, 190, 0.733); 
+}
+.marginForm{
+   margin-left: 10px;
 }
 /*Inicio FOOTER*/
 footer{
@@ -413,7 +428,7 @@ main#mainContacto{
       margin-top: 90px;
    }
    /*Banne Principal / Hero */
-   .bannerPrincipal{
+   .bannerBackground{
       height: 200px;
    }
    .textoBanner{
@@ -497,7 +512,7 @@ main#mainContacto{
       margin-top: 110px;
    }
    /*Banner Principal / Hero */
-   .bannerPrincipal{
+   .bannerBackground{
       height: 300px;
    }
    .textoBanner{
@@ -581,7 +596,7 @@ main#mainContacto{
       margin-top: 120px;
    }
    /*Banne Principal / Hero */
-   .bannerPrincipal{
+   .bannerBackground{
       height: 400px;
    }
    .textoBanner{
