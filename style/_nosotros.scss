@@ -1,0 +1,56 @@
+/*Sección Nosotros/Envios*/
+.bloqueContenedor{
+   .textoSubtitulos{
+      font-family: 'Lato', sans-serif;
+      font-weight: 700;
+      color: $color-fuente-texto;
+      margin-top: 5px;
+      margin-left: 10px;
+      @media(max-width:480px){
+         font-size: 18px;
+      }
+      @media(min-width:481px){
+         font-size: 20px; 
+      }
+      @media(min-width:781px){
+         font-size: 22px;
+      }
+   }
+   .textoDescriptivoNos{
+      font-family: 'Lato', sans-serif;
+      font-weight: 400;
+      color: $color-fuente-texto;
+      margin-bottom: 5px;
+      margin-left: 10px;
+      @media(max-width:480px){
+         font-size: 16px;
+      }
+      @media(min-width:481px){
+         font-size: 18px;  
+      }
+      @media(min-width:781px){
+         font-size: 20px; 
+      } 
+   }
+}
+/*----------------------------------------
+                  GRIDS
+----------------------------------------*/
+/*GRID NOSOTROS*/
+/*Definicion de áreas*/
+main#mainNosotros{
+   grid-area: mainNosotros;
+}
+/*Grilla*/
+#bodyNosotros{
+   display: grid;
+   grid-template-areas:
+   "mainNosotros"
+   "footer"; 
+   grid-template-columns: 1fr;
+   align-items: center;
+}
+
+
+
+ 

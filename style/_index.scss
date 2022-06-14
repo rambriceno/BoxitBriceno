@@ -1,0 +1,203 @@
+/*Banner Principal / Hero */
+.bannerBackground{
+   background-size:cover;
+   background-position: center center;
+   @media(max-width:480px){
+      height: 200px;
+   }
+   @media(min-width:481px){
+      height: 300px;
+   }
+   @media(min-width:781px){
+      height: 400px;
+   }
+    
+   &.image1{
+      background-image: url(../img/fotoBanner1.jpg);
+   }
+
+   &.image2{
+      background-image: url(../img/fotoBanner2.jpg);
+   }
+
+   &.image3{
+      background-image: url(../img/fotoBanner3.jpg);
+   }
+     
+   .textoBanner{
+      position: relative;
+      font-family: 'Lato', sans-serif;
+      font-weight: 900;
+      color: $color-fuente-banner;
+      line-height: 70%;
+      @media(max-width:480px){
+         top: 140px;
+         margin-left: 5px;
+         font-size: 16px;
+      }
+      @media(min-width:481px){
+         top: 230px;
+         margin-left: 5px;
+         font-size: 18px;
+      }
+      @media(min-width:781px){
+         top: 280px;
+         margin-left: 15px;
+         font-size: 30px;
+      }
+     }
+ }
+
+ /*Categorias página principal*/
+
+ #bCategorias, #bDulces, #bBebidas{
+    .textoCategorias{
+        text-align: center;
+        font-family: 'Lato', sans-serif;
+        font-weight: 700;
+        color: $color-fuente-texto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        @media(max-width:480px){
+         font-size: 18px;
+        }
+        @media(min-width:481px){
+         font-size: 20px;
+        }
+        @media(min-width:781px){
+         font-size: 25px;
+        }
+     }
+     .boxCategorias{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        .card{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            border-radius: 16px;
+            align-items: center;
+            margin-bottom: 10px;
+            .fotoCategorias{
+                width: 300px;
+                height: 300px;
+                /*border-radius: 15px;*/
+                @media(max-width:480px){
+                  width: 150px;
+                  height: 150px;
+                  border-radius: 10px; 
+                }
+                @media(min-width:481px){
+                  width: 225px;
+                  height: 225px;
+                  border-radius: 5px;
+                }
+                @media(min-width:781px){
+                  width: 300px;
+                  height: 300px;
+                  border-radius: 15px;
+                }
+             }
+             .button{
+                border-radius: 15px;
+                border: 0ch;
+                font-family: 'Lato', sans-serif;
+                padding: 4px;
+                margin: 3px;
+                width: auto;
+                cursor: pointer;
+                transition: all 0.5s;
+                background: $color-background-btn-index;
+                color: $color-fuente-btn-index;
+                &:hover{
+                    transform: scale(1.1);
+                    background:$color-background-btn-index-hover;
+                    color: $color-fuente-btn-index-hover;
+                }
+                @media(max-width:480px){
+                  font-size: 12px;
+                }
+                @media(min-width:481px){
+                  font-size: 14px;
+                }
+                @media(min-width:781px){
+                  font-size: 16px;
+                }
+             }
+             .textoTituloCategoria{
+                font-family: 'Lato', sans-serif;
+                font-weight: 700;
+                color: $color-fuente-texto;
+                @media(max-width:480px){
+                  font-size: 16px;
+                }
+                @media(min-width:481px){
+                  font-size: 18px;
+                }
+                @media(min-width:781px){
+                  font-size: 20px;
+                }
+             }
+             .textoDescriptivo{
+                font-family: 'Lato', sans-serif;
+                font-weight: 400;
+                color: $color-fuente-texto;
+                margin-bottom: 5px;  
+                @media(max-width:480px){
+                  font-size: 16px;
+                  width: 150px; 
+                }
+                @media(min-width:481px){
+                  font-size: 18px;
+                  width: 225px; 
+                }
+                @media(min-width:781px){
+                  font-size: 20px;
+                  width: 300px;
+                }
+             }
+         }
+     }
+ }
+ /*----------------------------------------
+                  GRIDS
+----------------------------------------*/
+/*GRID index*/
+/*Definicion de áreas*/
+main {
+    grid-area: main;
+ }
+ div#banner{
+    grid-area: banner;
+ }
+ section#bCategorias{
+    grid-area: bCategorias;
+ }
+ section#bDulces{
+    grid-area: bDulces;
+ }
+ section#bBebidas{
+    grid-area: bBebidas;
+ }
+ footer{
+    grid-area: footer;
+ }
+ /*Grilla*/
+ #body{
+    display: grid;
+    grid-template-areas:
+    "main"
+    "footer";
+    grid-template-columns: 1fr;
+    align-items: center;  
+ }
+ #main{
+   display: grid;
+   grid-template-areas:
+   "banner"
+   "bCategorias"
+   "bDulces"
+   "bBebidas";
+   align-items: center;
+}

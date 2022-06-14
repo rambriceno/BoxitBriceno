@@ -1,0 +1,45 @@
+/*Sección envíos*/
+.mapa{
+    display: block;
+    margin: auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border-radius: 20px;
+    @media(max-width:480px){
+      width: 200px;
+      height: 200px; 
+    }
+    @media(min-width:481px){
+      width: 300px;
+      height: 300px;
+    }
+    @media(min-width:781px){
+      width: 400px;
+      height: 400px;
+    }
+ }
+ .margenBoton{
+    margin-left: 15px;
+ }
+ .figCaption{
+    text-align: center;
+    margin-bottom: 15px;
+ }
+
+ /*----------------------------------------
+                  GRIDS
+----------------------------------------*/
+/*GRID ENVIOS*/
+/*Definicion de áreas*/
+main#mainEnvios{
+   grid-area: mainEnvios;
+}
+/*Grilla*/
+#bodyEnvios{
+   display: grid;
+   grid-template-areas:
+   "mainEnvios"
+   "footer"; 
+   grid-template-columns: 1fr;
+   align-items: center;
+}

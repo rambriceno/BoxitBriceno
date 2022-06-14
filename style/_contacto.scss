@@ -1,0 +1,31 @@
+/*Sección contacto*/
+ .marginForm{
+    margin-left: 10px;
+ }
+ .btn-primary{
+    background-color: $color-background-btn-contacto;
+    border-color: $color-border-btn-contacto;
+    &:hover{
+        color: $color-fuente-btn-contacto-hover;
+        background-color: $color-background-btn-contacto-hover;
+        border-color: $color-border-btn-contacto-hover;
+    }
+ }
+
+/*----------------------------------------
+                  GRIDS
+----------------------------------------*/
+/*GRID Contacto*/
+/*Definicion de áreas*/
+main#mainContacto{
+   grid-area: mainContacto;
+}
+/*Grilla*/
+#bodyContacto{
+   display: grid;
+   grid-template-areas:
+   "mainContacto"
+   "footer"; 
+   grid-template-columns: 1fr;
+   align-items: center;
+}
