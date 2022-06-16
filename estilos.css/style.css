@@ -20,66 +20,80 @@ header {
   z-index: 1000;
 }
 
-nav {
+/*Modificando nuevo var de BootStrap*/
+.navbar-collapse {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.navbar-nav {
+  gap: 10px;
   text-align: center;
 }
 
-nav ul {
-  list-style-type: none;
+.nav-link {
+  color: #6d6a6a;
+  font-size: 20px;
 }
 
-nav ul li {
-  display: inline-block;
-}
-
-nav ul li:hover {
+.nav-link:hover {
+  color: black;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
 
-nav ul li a {
-  text-decoration: none;
-  font-family: 'Lato', sans-serif;
-  font-weight: 400;
-  color: #6d6a6a;
-  padding: 15px;
-  margin-left: 10px;
-  margin-right: 10px;
+.navbar-toggler {
+  background-color: #0014ff12;
 }
 
-nav ul li a:hover {
-  color: black;
+/* No se usa, se aplicó BootStrap
+nav{
+    text-align: center;
+    ul{
+        list-style-type: none;
+        li{
+            display: inline-block;
+            &:hover{
+                transform: scale(1.1);
+                transition: all 0.5s;
+            }
+            a{
+                text-decoration: none;
+                font-family: 'Lato', sans-serif;
+                font-weight: 400;
+                color: $color-fuente-hf;
+                padding: 15px;
+                margin-left: 10px;
+                margin-right: 10px;
+                &:hover{
+                    color: black;
+                }
+                
+                @media(max-width:480px){
+                    font-size: 16px;
+                    padding: 3px;
+                    margin-left: 0px;
+                    margin-right: 0px;
+                }
+                @media(min-width:481px){
+                    font-size: 18px;
+                    padding: 3px;
+                    margin-left: 0px;
+                    margin-right: 0px;
+                }
+                @media(min-width:781px){
+                    font-size: 20px;
+                    padding: 15px;
+                    margin-right: 10px;  
+                }
+            }
+        }
+    }
 }
-
-@media (max-width: 480px) {
-  nav ul li a {
-    font-size: 16px;
-    padding: 3px;
-    margin-left: 0px;
-    margin-right: 0px;
-  }
-}
-
-@media (min-width: 481px) {
-  nav ul li a {
-    font-size: 18px;
-    padding: 3px;
-    margin-left: 0px;
-    margin-right: 0px;
-  }
-}
-
-@media (min-width: 781px) {
-  nav ul li a {
-    font-size: 20px;
-    padding: 15px;
-    /*margin-left: 10px;*/
-    margin-right: 10px;
-  }
-}
-
+*/
 .logo {
   width: 75px;
   height: 75px;
@@ -443,8 +457,7 @@ footer {
 #body {
   display: -ms-grid;
   display: grid;
-      grid-template-areas: "main"
- "footer";
+      grid-template-areas: "main" "footer";
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
   -webkit-box-align: center;
@@ -455,10 +468,7 @@ footer {
 #main {
   display: -ms-grid;
   display: grid;
-      grid-template-areas: "banner"
- "bCategorias"
- "bDulces"
- "bBebidas";
+      grid-template-areas: "banner" "bCategorias" "bDulces" "bBebidas";
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -532,8 +542,7 @@ main#mainNosotros {
 #bodyNosotros {
   display: -ms-grid;
   display: grid;
-      grid-template-areas: "mainNosotros"
- "footer";
+      grid-template-areas: "mainNosotros" "footer";
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
   -webkit-box-align: center;
@@ -728,7 +737,7 @@ main#mainNosotros {
 
 @media (min-width: 781px) {
   .formatoModelos #encabezado #precio .button2 {
-    font-size: 26px;
+    font-size: 16px;
   }
 }
 
@@ -771,8 +780,7 @@ section#dulce4 {
 #bodyDulces {
   display: -ms-grid;
   display: grid;
-      grid-template-areas: "mainDulces"
- "footer";
+      grid-template-areas: "mainDulces" "footer";
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
   -webkit-box-align: center;
@@ -783,10 +791,7 @@ section#dulce4 {
 #mainDulces {
   display: -ms-grid;
   display: grid;
-      grid-template-areas: "dulce1"
- "dulce2"
- "dulce3"
- "dulce4";
+      grid-template-areas: "dulce1" "dulce2" "dulce3" "dulce4";
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
   -webkit-box-align: center;
@@ -830,8 +835,7 @@ section#bebida4 {
 #bodyBebidas {
   display: -ms-grid;
   display: grid;
-      grid-template-areas: "mainBebidas"
- "footer";
+      grid-template-areas: "mainBebidas" "footer";
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
   -webkit-box-align: center;
@@ -842,10 +846,7 @@ section#bebida4 {
 #mainBebidas {
   display: -ms-grid;
   display: grid;
-      grid-template-areas: "bebida1"
- "bebida2"
- "bebida3"
- "bebida4";
+      grid-template-areas: "bebida1" "bebida2" "bebida3" "bebida4";
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
   -webkit-box-align: center;
@@ -907,8 +908,7 @@ main#mainEnvios {
 #bodyEnvios {
   display: -ms-grid;
   display: grid;
-      grid-template-areas: "mainEnvios"
- "footer";
+      grid-template-areas: "mainEnvios" "footer";
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
   -webkit-box-align: center;
@@ -947,8 +947,7 @@ main#mainContacto {
 #bodyContacto {
   display: -ms-grid;
   display: grid;
-      grid-template-areas: "mainContacto"
- "footer";
+      grid-template-areas: "mainContacto" "footer";
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
   -webkit-box-align: center;
