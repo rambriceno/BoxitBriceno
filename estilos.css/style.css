@@ -8,7 +8,7 @@
 
 body {
   background-color: whitesmoke;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 header {
@@ -22,9 +22,7 @@ header {
 
 /*Modificando nuevo var de BootStrap*/
 .navbar-collapse {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 
 .navbar-nav {
@@ -33,20 +31,17 @@ header {
 }
 
 .nav-link {
-  color: #6d6a6a;
+  color: rgb(109, 106, 106);
   font-size: 20px;
 }
-
 .nav-link:hover {
   color: black;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-  -webkit-transition: all 0.5s;
+  transform: scale(1.1);
   transition: all 0.5s;
 }
 
 .navbar-toggler {
-  background-color: #0014ff12;
+  background-color: rgba(0, 20, 255, 0.0705882353);
 }
 
 /* No se usa, se aplicó BootStrap
@@ -71,7 +66,7 @@ nav{
                 &:hover{
                     color: black;
                 }
-                
+
                 @media(max-width:480px){
                     font-size: 16px;
                     padding: 3px;
@@ -97,29 +92,23 @@ nav{
 .logo {
   width: 75px;
   height: 75px;
-  -webkit-transition: all 1s;
   transition: all 1s;
 }
-
 .logo:hover {
-  -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
+  transform: rotate(360deg);
 }
-
 @media (max-width: 480px) {
   .logo {
     width: 50px;
     height: 50px;
   }
 }
-
 @media (min-width: 481px) {
   .logo {
     width: 65px;
     height: 65px;
   }
 }
-
 @media (min-width: 781px) {
   .logo {
     width: 75px;
@@ -132,14 +121,12 @@ main {
   min-height: calc(100vh - 185px);
   margin-top: 120px;
 }
-
 @media (min-width: 481px) {
   main {
     min-height: calc(100vh - 180px);
     margin-top: 110px;
   }
 }
-
 @media (min-width: 781px) {
   main {
     min-height: calc(100vh - 205px);
@@ -153,12 +140,11 @@ footer {
   padding: 25px 0 25px 0;
   display: block;
 }
-
 footer .textoFooter {
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   font-size: 12px;
   font-weight: 400;
-  color: #6d6a6a;
+  color: rgb(109, 106, 106);
   margin-left: 10px;
 }
 
@@ -170,49 +156,44 @@ footer .textoFooter {
 }
 
 /*Banner Principal / Hero */
+/*Agregando Mixin / Solo para el Desafio*/
 .bannerBackground {
   background-size: cover;
   background-position: center center;
 }
-
 @media (max-width: 480px) {
   .bannerBackground {
     height: 200px;
   }
 }
-
 @media (min-width: 481px) {
   .bannerBackground {
     height: 300px;
   }
 }
-
 @media (min-width: 781px) {
   .bannerBackground {
     height: 400px;
   }
 }
-
 .bannerBackground.image1 {
   background-image: url(../img/fotoBanner1.jpg);
 }
-
 .bannerBackground.image2 {
   background-image: url(../img/fotoBanner2.jpg);
 }
-
 .bannerBackground.image3 {
   background-image: url(../img/fotoBanner3.jpg);
 }
-
 .bannerBackground .textoBanner {
   position: relative;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 900;
   color: white;
+  /*font-weight: 900;
+  color: $color-fuente-banner;*/
   line-height: 70%;
 }
-
 @media (max-width: 480px) {
   .bannerBackground .textoBanner {
     top: 140px;
@@ -220,7 +201,6 @@ footer .textoFooter {
     font-size: 16px;
   }
 }
-
 @media (min-width: 481px) {
   .bannerBackground .textoBanner {
     top: 230px;
@@ -228,7 +208,6 @@ footer .textoFooter {
     font-size: 18px;
   }
 }
-
 @media (min-width: 781px) {
   .bannerBackground .textoBanner {
     top: 280px;
@@ -240,63 +219,46 @@ footer .textoFooter {
 /*Categorias página principal*/
 #bCategorias .textoCategorias, #bDulces .textoCategorias, #bBebidas .textoCategorias {
   text-align: center;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 700;
-  color: #1a1919;
+  color: rgb(26, 25, 25);
+  /*font-weight: 700;
+  color: $color-fuente-texto;*/
   margin-top: 10px;
   margin-bottom: 10px;
 }
-
 @media (max-width: 480px) {
   #bCategorias .textoCategorias, #bDulces .textoCategorias, #bBebidas .textoCategorias {
     font-size: 18px;
   }
 }
-
 @media (min-width: 481px) {
   #bCategorias .textoCategorias, #bDulces .textoCategorias, #bBebidas .textoCategorias {
     font-size: 20px;
   }
 }
-
 @media (min-width: 781px) {
   #bCategorias .textoCategorias, #bDulces .textoCategorias, #bBebidas .textoCategorias {
     font-size: 25px;
   }
 }
-
 #bCategorias .boxCategorias, #bDulces .boxCategorias, #bBebidas .boxCategorias {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
-
 #bCategorias .boxCategorias .card, #bDulces .boxCategorias .card, #bBebidas .boxCategorias .card {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   text-align: center;
   border-radius: 16px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   margin-bottom: 10px;
 }
-
 #bCategorias .boxCategorias .card .fotoCategorias, #bDulces .boxCategorias .card .fotoCategorias, #bBebidas .boxCategorias .card .fotoCategorias {
   width: 300px;
   height: 300px;
-  /*border-radius: 15px;*/
 }
-
 @media (max-width: 480px) {
   #bCategorias .boxCategorias .card .fotoCategorias, #bDulces .boxCategorias .card .fotoCategorias, #bBebidas .boxCategorias .card .fotoCategorias {
     width: 150px;
@@ -304,7 +266,6 @@ footer .textoFooter {
     border-radius: 10px;
   }
 }
-
 @media (min-width: 481px) {
   #bCategorias .boxCategorias .card .fotoCategorias, #bDulces .boxCategorias .card .fotoCategorias, #bBebidas .boxCategorias .card .fotoCategorias {
     width: 225px;
@@ -312,7 +273,6 @@ footer .textoFooter {
     border-radius: 5px;
   }
 }
-
 @media (min-width: 781px) {
   #bCategorias .boxCategorias .card .fotoCategorias, #bDulces .boxCategorias .card .fotoCategorias, #bBebidas .boxCategorias .card .fotoCategorias {
     width: 300px;
@@ -320,91 +280,80 @@ footer .textoFooter {
     border-radius: 15px;
   }
 }
-
 #bCategorias .boxCategorias .card .button, #bDulces .boxCategorias .card .button, #bBebidas .boxCategorias .card .button {
   border-radius: 15px;
   border: 0ch;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   padding: 4px;
   margin: 3px;
   width: auto;
   cursor: pointer;
-  -webkit-transition: all 0.5s;
   transition: all 0.5s;
-  background: #d6b29e;
+  background: rgb(214, 178, 158);
   color: white;
 }
-
 #bCategorias .boxCategorias .card .button:hover, #bDulces .boxCategorias .card .button:hover, #bBebidas .boxCategorias .card .button:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-  background: #a8b6c9;
+  transform: scale(1.1);
+  background: rgb(168, 182, 201);
   color: black;
 }
-
 @media (max-width: 480px) {
   #bCategorias .boxCategorias .card .button, #bDulces .boxCategorias .card .button, #bBebidas .boxCategorias .card .button {
     font-size: 12px;
   }
 }
-
 @media (min-width: 481px) {
   #bCategorias .boxCategorias .card .button, #bDulces .boxCategorias .card .button, #bBebidas .boxCategorias .card .button {
     font-size: 14px;
   }
 }
-
 @media (min-width: 781px) {
   #bCategorias .boxCategorias .card .button, #bDulces .boxCategorias .card .button, #bBebidas .boxCategorias .card .button {
     font-size: 16px;
   }
 }
-
 #bCategorias .boxCategorias .card .textoTituloCategoria, #bDulces .boxCategorias .card .textoTituloCategoria, #bBebidas .boxCategorias .card .textoTituloCategoria {
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 700;
-  color: #1a1919;
+  color: rgb(26, 25, 25);
+  /*font-weight: 700;
+  color: $color-fuente-texto;*/
 }
-
 @media (max-width: 480px) {
   #bCategorias .boxCategorias .card .textoTituloCategoria, #bDulces .boxCategorias .card .textoTituloCategoria, #bBebidas .boxCategorias .card .textoTituloCategoria {
     font-size: 16px;
   }
 }
-
 @media (min-width: 481px) {
   #bCategorias .boxCategorias .card .textoTituloCategoria, #bDulces .boxCategorias .card .textoTituloCategoria, #bBebidas .boxCategorias .card .textoTituloCategoria {
     font-size: 18px;
   }
 }
-
 @media (min-width: 781px) {
   #bCategorias .boxCategorias .card .textoTituloCategoria, #bDulces .boxCategorias .card .textoTituloCategoria, #bBebidas .boxCategorias .card .textoTituloCategoria {
     font-size: 20px;
   }
 }
-
 #bCategorias .boxCategorias .card .textoDescriptivo, #bDulces .boxCategorias .card .textoDescriptivo, #bBebidas .boxCategorias .card .textoDescriptivo {
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 400;
-  color: #1a1919;
+  color: rgb(26, 25, 25);
+  /*font-weight: 400;
+  color: $color-fuente-texto;*/
   margin-bottom: 5px;
 }
-
 @media (max-width: 480px) {
   #bCategorias .boxCategorias .card .textoDescriptivo, #bDulces .boxCategorias .card .textoDescriptivo, #bBebidas .boxCategorias .card .textoDescriptivo {
     font-size: 16px;
     width: 150px;
   }
 }
-
 @media (min-width: 481px) {
   #bCategorias .boxCategorias .card .textoDescriptivo, #bDulces .boxCategorias .card .textoDescriptivo, #bBebidas .boxCategorias .card .textoDescriptivo {
     font-size: 18px;
     width: 225px;
   }
 }
-
 @media (min-width: 781px) {
   #bCategorias .boxCategorias .card .textoDescriptivo, #bDulces .boxCategorias .card .textoDescriptivo, #bBebidas .boxCategorias .card .textoDescriptivo {
     font-size: 20px;
@@ -418,109 +367,83 @@ footer .textoFooter {
 /*GRID index*/
 /*Definicion de áreas*/
 main {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
   grid-area: main;
 }
 
 div#banner {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
   grid-area: banner;
 }
 
 section#bCategorias {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
   grid-area: bCategorias;
 }
 
 section#bDulces {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
   grid-area: bDulces;
 }
 
 section#bBebidas {
-  -ms-grid-row: 4;
-  -ms-grid-column: 1;
   grid-area: bBebidas;
 }
 
 footer {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
   grid-area: footer;
 }
 
 /*Grilla*/
 #body {
-  display: -ms-grid;
   display: grid;
-      grid-template-areas: "main" "footer";
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  grid-template-areas: "main" "footer";
+  grid-template-columns: 1fr;
+  align-items: center;
 }
 
 #main {
-  display: -ms-grid;
   display: grid;
-      grid-template-areas: "banner" "bCategorias" "bDulces" "bBebidas";
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  grid-template-areas: "banner" "bCategorias" "bDulces" "bBebidas";
+  align-items: center;
 }
 
 /*Sección Nosotros/Envios*/
 .bloqueContenedor .textoSubtitulos {
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 700;
-  color: #1a1919;
+  color: rgb(26, 25, 25);
   margin-top: 5px;
   margin-left: 10px;
 }
-
 @media (max-width: 480px) {
   .bloqueContenedor .textoSubtitulos {
     font-size: 18px;
   }
 }
-
 @media (min-width: 481px) {
   .bloqueContenedor .textoSubtitulos {
     font-size: 20px;
   }
 }
-
 @media (min-width: 781px) {
   .bloqueContenedor .textoSubtitulos {
     font-size: 22px;
   }
 }
-
 .bloqueContenedor .textoDescriptivoNos {
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 400;
-  color: #1a1919;
+  color: rgb(26, 25, 25);
   margin-bottom: 5px;
   margin-left: 10px;
 }
-
 @media (max-width: 480px) {
   .bloqueContenedor .textoDescriptivoNos {
     font-size: 16px;
   }
 }
-
 @media (min-width: 481px) {
   .bloqueContenedor .textoDescriptivoNos {
     font-size: 18px;
   }
 }
-
 @media (min-width: 781px) {
   .bloqueContenedor .textoDescriptivoNos {
     font-size: 20px;
@@ -533,41 +456,29 @@ footer {
 /*GRID NOSOTROS*/
 /*Definicion de áreas*/
 main#mainNosotros {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
   grid-area: mainNosotros;
 }
 
 /*Grilla*/
 #bodyNosotros {
-  display: -ms-grid;
   display: grid;
-      grid-template-areas: "mainNosotros" "footer";
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  grid-template-areas: "mainNosotros" "footer";
+  grid-template-columns: 1fr;
+  align-items: center;
 }
 
 /*Secciones BoxBebidas y BoxDulces*/
 .formatoModelos {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
+  justify-content: start;
   /*flex-wrap: wrap;*/
   gap: 10px;
   margin: 15px 0px 5px 15px;
 }
-
 .formatoModelos #foto .fotoModelos {
   display: block;
   margin: auto;
 }
-
 @media (max-width: 480px) {
   .formatoModelos #foto .fotoModelos {
     width: 150px;
@@ -575,7 +486,6 @@ main#mainNosotros {
     border-radius: 10px;
   }
 }
-
 @media (min-width: 481px) {
   .formatoModelos #foto .fotoModelos {
     width: 225px;
@@ -583,7 +493,6 @@ main#mainNosotros {
     border-radius: 15px;
   }
 }
-
 @media (min-width: 781px) {
   .formatoModelos #foto .fotoModelos {
     width: 300px;
@@ -591,153 +500,114 @@ main#mainNosotros {
     border-radius: 20px;
   }
 }
-
 .formatoModelos #encabezado {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   /*align-items: center;*/
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
-
-.formatoModelos #encabezado #descripcion .tituloModelos {
-  font-family: 'Lato', sans-serif;
+.formatoModelos #encabezado #descripcion .tituloModelos, .formatoModelos #encabezado #descripcion .subtituloModelos, .formatoModelos #encabezado #descripcion .descripcionModelos, .formatoModelos #encabezado #descripcion .detalleModelos {
+  font-family: "Lato", sans-serif;
   font-size: 25px;
   font-weight: 700;
-  color: #1a1919;
+  color: rgb(26, 25, 25);
 }
-
 @media (max-width: 480px) {
-  .formatoModelos #encabezado #descripcion .tituloModelos {
+  .formatoModelos #encabezado #descripcion .tituloModelos, .formatoModelos #encabezado #descripcion .subtituloModelos, .formatoModelos #encabezado #descripcion .descripcionModelos, .formatoModelos #encabezado #descripcion .detalleModelos {
     font-size: 18px;
   }
 }
-
 @media (min-width: 481px) {
-  .formatoModelos #encabezado #descripcion .tituloModelos {
+  .formatoModelos #encabezado #descripcion .tituloModelos, .formatoModelos #encabezado #descripcion .subtituloModelos, .formatoModelos #encabezado #descripcion .descripcionModelos, .formatoModelos #encabezado #descripcion .detalleModelos {
     font-size: 20px;
   }
 }
-
 @media (min-width: 781px) {
-  .formatoModelos #encabezado #descripcion .tituloModelos {
+  .formatoModelos #encabezado #descripcion .tituloModelos, .formatoModelos #encabezado #descripcion .subtituloModelos, .formatoModelos #encabezado #descripcion .descripcionModelos, .formatoModelos #encabezado #descripcion .detalleModelos {
     font-size: 22px;
   }
 }
-
 .formatoModelos #encabezado #descripcion .detalleModelos {
-  font-family: 'Lato', sans-serif;
   font-weight: 400;
-  color: #1a1919;
-  color: #1a1919;
 }
-
 @media (max-width: 480px) {
   .formatoModelos #encabezado #descripcion .detalleModelos {
     font-size: 16px;
   }
 }
-
 @media (min-width: 481px) {
   .formatoModelos #encabezado #descripcion .detalleModelos {
     font-size: 18px;
   }
 }
-
 @media (min-width: 781px) {
   .formatoModelos #encabezado #descripcion .detalleModelos {
     font-size: 20px;
   }
 }
-
-.formatoModelos #encabezado #descripcion .subtituloModelos {
-  font-family: 'Lato', sans-serif;
-  font-weight: 700;
-  color: #1a1919;
-}
-
-@media (max-width: 480px) {
-  .formatoModelos #encabezado #descripcion .subtituloModelos {
-    font-size: 16px;
-  }
-}
-
-@media (min-width: 481px) {
-  .formatoModelos #encabezado #descripcion .subtituloModelos {
-    font-size: 18px;
-  }
-}
-
-@media (min-width: 781px) {
-  .formatoModelos #encabezado #descripcion .subtituloModelos {
-    font-size: 20px;
-  }
-}
-
 .formatoModelos #encabezado #descripcion .descripcionModelos {
-  font-family: 'Lato', sans-serif;
   font-weight: 400;
-  color: #1a1919;
 }
-
 @media (max-width: 480px) {
   .formatoModelos #encabezado #descripcion .descripcionModelos {
     font-size: 16px;
   }
 }
-
 @media (min-width: 481px) {
   .formatoModelos #encabezado #descripcion .descripcionModelos {
     font-size: 18px;
   }
 }
-
 @media (min-width: 781px) {
   .formatoModelos #encabezado #descripcion .descripcionModelos {
     font-size: 20px;
   }
 }
-
 .formatoModelos #encabezado #precio .button2 {
   border-radius: 5px;
   border: 0ch;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   padding: 4px;
   margin: 3px;
   width: auto;
   cursor: pointer;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(99, 93, 190, 0.733)), to(#a8b6c9));
-  background: linear-gradient(to right, rgba(99, 93, 190, 0.733), #a8b6c9);
-  -webkit-transition: all 0.2s;
+  background: linear-gradient(to right, rgba(99, 93, 190, 0.733), rgb(168, 182, 201));
   transition: all 0.2s;
   color: black;
 }
-
 .formatoModelos #encabezado #precio .button2:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  transform: scale(1.1);
 }
-
 @media (max-width: 480px) {
   .formatoModelos #encabezado #precio .button2 {
     font-size: 12px;
   }
 }
-
 @media (min-width: 481px) {
   .formatoModelos #encabezado #precio .button2 {
     font-size: 14px;
   }
 }
-
 @media (min-width: 781px) {
   .formatoModelos #encabezado #precio .button2 {
     font-size: 16px;
+  }
+}
+
+/*Se coloca afuera porque se repite en dos div*/
+@media (max-width: 480px) {
+  #encabezado #descripcion .subtituloModelos, #encabezado #precio .subtituloModelos {
+    font-size: 16px;
+  }
+}
+@media (min-width: 481px) {
+  #encabezado #descripcion .subtituloModelos, #encabezado #precio .subtituloModelos {
+    font-size: 18px;
+  }
+}
+@media (min-width: 781px) {
+  #encabezado #descripcion .subtituloModelos, #encabezado #precio .subtituloModelos {
+    font-size: 20px;
   }
 }
 
@@ -747,111 +617,75 @@ main#mainNosotros {
 /*GRID BOXDULCES*/
 /*Definicion de áreas*/
 main#mainDulces {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
   grid-area: mainDulces;
 }
 
 section#dulce1 {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
   grid-area: dulce1;
 }
 
 section#dulce2 {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
   grid-area: dulce2;
 }
 
 section#dulce3 {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
   grid-area: dulce3;
 }
 
 section#dulce4 {
-  -ms-grid-row: 4;
-  -ms-grid-column: 1;
   grid-area: dulce4;
 }
 
 /*Grilla*/
 #bodyDulces {
-  display: -ms-grid;
   display: grid;
-      grid-template-areas: "mainDulces" "footer";
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  grid-template-areas: "mainDulces" "footer";
+  grid-template-columns: 1fr;
+  align-items: center;
 }
 
 #mainDulces {
-  display: -ms-grid;
   display: grid;
-      grid-template-areas: "dulce1" "dulce2" "dulce3" "dulce4";
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  grid-template-areas: "dulce1" "dulce2" "dulce3" "dulce4";
+  grid-template-columns: 1fr;
+  align-items: center;
 }
 
 /*GRID BEBIDAS*/
 /*Definicion de áreas*/
 main#mainBebidas {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
   grid-area: mainBebidas;
 }
 
 section#bebida1 {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
   grid-area: bebida1;
 }
 
 section#bebida2 {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
   grid-area: bebida2;
 }
 
 section#bebida3 {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
   grid-area: bebida3;
 }
 
 section#bebida4 {
-  -ms-grid-row: 4;
-  -ms-grid-column: 1;
   grid-area: bebida4;
 }
 
 /*Grilla*/
 #bodyBebidas {
-  display: -ms-grid;
   display: grid;
-      grid-template-areas: "mainBebidas" "footer";
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  grid-template-areas: "mainBebidas" "footer";
+  grid-template-columns: 1fr;
+  align-items: center;
 }
 
 #mainBebidas {
-  display: -ms-grid;
   display: grid;
-      grid-template-areas: "bebida1" "bebida2" "bebida3" "bebida4";
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  grid-template-areas: "bebida1" "bebida2" "bebida3" "bebida4";
+  grid-template-columns: 1fr;
+  align-items: center;
 }
 
 /*Sección envíos*/
@@ -862,21 +696,18 @@ section#bebida4 {
   margin-top: 10px;
   border-radius: 20px;
 }
-
 @media (max-width: 480px) {
   .mapa {
     width: 200px;
     height: 200px;
   }
 }
-
 @media (min-width: 481px) {
   .mapa {
     width: 300px;
     height: 300px;
   }
 }
-
 @media (min-width: 781px) {
   .mapa {
     width: 400px;
@@ -899,21 +730,15 @@ section#bebida4 {
 /*GRID ENVIOS*/
 /*Definicion de áreas*/
 main#mainEnvios {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
   grid-area: mainEnvios;
 }
 
 /*Grilla*/
 #bodyEnvios {
-  display: -ms-grid;
   display: grid;
-      grid-template-areas: "mainEnvios" "footer";
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  grid-template-areas: "mainEnvios" "footer";
+  grid-template-columns: 1fr;
+  align-items: center;
 }
 
 /*Sección contacto*/
@@ -925,7 +750,6 @@ main#mainEnvios {
   background-color: #a8b6c9;
   border-color: #a8b6c9;
 }
-
 .btn-primary:hover {
   color: white;
   background-color: #d6b29e;
@@ -938,20 +762,13 @@ main#mainEnvios {
 /*GRID Contacto*/
 /*Definicion de áreas*/
 main#mainContacto {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
   grid-area: mainContacto;
 }
 
 /*Grilla*/
 #bodyContacto {
-  display: -ms-grid;
   display: grid;
-      grid-template-areas: "mainContacto" "footer";
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-/*# sourceMappingURL=style.css.map */
+  grid-template-areas: "mainContacto" "footer";
+  grid-template-columns: 1fr;
+  align-items: center;
+}/*# sourceMappingURL=style.css.map */

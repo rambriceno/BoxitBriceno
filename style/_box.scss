@@ -1,5 +1,4 @@
 /*Secciones BoxBebidas y BoxDulces*/
-
 .formatoModelos{
     display: flex;
     justify-content: start;
@@ -49,10 +48,8 @@
                 }
              }
              .detalleModelos{
-                font-family: 'Lato', sans-serif;
+                @extend .tituloModelos;
                 font-weight: 400;
-                color: $color-fuente-texto;
-                color: $color-fuente-texto;
                 @media(max-width:480px){
                   font-size: 16px;
                 }
@@ -63,24 +60,10 @@
                   font-size: 20px;
                 }
              }
-             .subtituloModelos{
-                font-family: 'Lato', sans-serif;
-                font-weight: 700;
-                color: $color-fuente-texto;
-                @media(max-width:480px){
-                  font-size: 16px; 
-                }
-                @media(min-width:481px){
-                  font-size: 18px;
-                }
-                @media(min-width:781px){
-                  font-size: 20px;
-                }
-             }
+
              .descripcionModelos{
-                font-family: 'Lato', sans-serif;
+                @extend .tituloModelos;
                 font-weight: 400;
-                color: $color-fuente-texto;
                 @media(max-width:480px){
                   font-size: 16px;
                 }
@@ -120,6 +103,24 @@
         }
     }
 }
+/*Se coloca afuera porque se repite en dos div*/
+   #encabezado{
+      #descripcion, #precio{
+         .subtituloModelos{
+            @extend .tituloModelos;
+            @media(max-width:480px){
+            font-size: 16px; 
+            }
+            @media(min-width:481px){
+            font-size: 18px;
+            }
+            @media(min-width:781px){
+            font-size: 20px;
+            }
+         }
+      }
+   }
+
 /*----------------------------------------
                   GRIDS
 ----------------------------------------*/
