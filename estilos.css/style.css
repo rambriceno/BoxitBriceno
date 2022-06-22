@@ -148,6 +148,16 @@ footer .textoFooter {
   margin-left: 10px;
 }
 
+/*mapas -- Se colocó provisional para el desafío, luego se elimina*/
+.textoFooter {
+  background-color: rgb(194, 248, 194);
+}
+
+.textoContacto {
+  background-color: rgb(243, 168, 168);
+}
+
+/*--------*/
 @media (max-width: 480px) {
   main {
     min-height: calc(100vh - 160px);

@@ -133,6 +133,18 @@ footer{
         margin-left: 10px;   
      }
  }
+ /*mapas -- Se colocó provisional para el desafío, luego se elimina*/
+ $textos: (
+    Footer: rgb(194, 248, 194),
+    Contacto: rgb(243, 168, 168),
+ );
+ @each $text, $fontColor in $textos {
+    .texto#{$text}{
+        background-color: $fontColor;
+
+    }
+ }
+ /*--------*/
 
  main{
     @media(max-width:480px){
