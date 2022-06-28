@@ -20,7 +20,6 @@ header {
   z-index: 1000;
 }
 
-/*Modificando nuevo var de BootStrap*/
 .navbar-collapse {
   justify-content: center;
 }
@@ -44,51 +43,6 @@ header {
   background-color: rgba(0, 20, 255, 0.0705882353);
 }
 
-/* No se usa, se aplicó BootStrap
-nav{
-    text-align: center;
-    ul{
-        list-style-type: none;
-        li{
-            display: inline-block;
-            &:hover{
-                transform: scale(1.1);
-                transition: all 0.5s;
-            }
-            a{
-                text-decoration: none;
-                font-family: 'Lato', sans-serif;
-                font-weight: 400;
-                color: $color-fuente-hf;
-                padding: 15px;
-                margin-left: 10px;
-                margin-right: 10px;
-                &:hover{
-                    color: black;
-                }
-
-                @media(max-width:480px){
-                    font-size: 16px;
-                    padding: 3px;
-                    margin-left: 0px;
-                    margin-right: 0px;
-                }
-                @media(min-width:481px){
-                    font-size: 18px;
-                    padding: 3px;
-                    margin-left: 0px;
-                    margin-right: 0px;
-                }
-                @media(min-width:781px){
-                    font-size: 20px;
-                    padding: 15px;
-                    margin-right: 10px;  
-                }
-            }
-        }
-    }
-}
-*/
 .logo {
   width: 75px;
   height: 75px;
@@ -116,7 +70,7 @@ nav{
   }
 }
 
-/*inicio MAIN*/
+/*Inicio MAIN*/
 main {
   min-height: calc(100vh - 185px);
   margin-top: 120px;
@@ -148,16 +102,6 @@ footer .textoFooter {
   margin-left: 10px;
 }
 
-/*mapas -- Se colocó provisional para el desafío, luego se elimina*/
-.textoFooter {
-  background-color: rgb(194, 248, 194);
-}
-
-.textoContacto {
-  background-color: rgb(243, 168, 168);
-}
-
-/*--------*/
 @media (max-width: 480px) {
   main {
     min-height: calc(100vh - 160px);
@@ -166,7 +110,6 @@ footer .textoFooter {
 }
 
 /*Banner Principal / Hero */
-/*Agregando Mixin / Solo para el Desafio*/
 .bannerBackground {
   background-size: cover;
   background-position: center center;
@@ -200,8 +143,6 @@ footer .textoFooter {
   font-family: "Lato", sans-serif;
   font-weight: 900;
   color: white;
-  /*font-weight: 900;
-  color: $color-fuente-banner;*/
   line-height: 70%;
 }
 @media (max-width: 480px) {
@@ -232,8 +173,6 @@ footer .textoFooter {
   font-family: "Lato", sans-serif;
   font-weight: 700;
   color: rgb(26, 25, 25);
-  /*font-weight: 700;
-  color: $color-fuente-texto;*/
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -326,8 +265,6 @@ footer .textoFooter {
   font-family: "Lato", sans-serif;
   font-weight: 700;
   color: rgb(26, 25, 25);
-  /*font-weight: 700;
-  color: $color-fuente-texto;*/
 }
 @media (max-width: 480px) {
   #bCategorias .boxCategorias .card .textoTituloCategoria, #bDulces .boxCategorias .card .textoTituloCategoria, #bBebidas .boxCategorias .card .textoTituloCategoria {
@@ -348,8 +285,6 @@ footer .textoFooter {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   color: rgb(26, 25, 25);
-  /*font-weight: 400;
-  color: $color-fuente-texto;*/
   margin-bottom: 5px;
 }
 @media (max-width: 480px) {
@@ -481,7 +416,6 @@ main#mainNosotros {
 .formatoModelos {
   display: flex;
   justify-content: start;
-  /*flex-wrap: wrap;*/
   gap: 10px;
   margin: 15px 0px 5px 15px;
 }
@@ -513,7 +447,6 @@ main#mainNosotros {
 .formatoModelos #encabezado {
   display: flex;
   flex-direction: column;
-  /*align-items: center;*/
   flex-wrap: wrap;
 }
 .formatoModelos #encabezado #descripcion .tituloModelos, .formatoModelos #encabezado #descripcion .subtituloModelos, .formatoModelos #encabezado #descripcion .descripcionModelos, .formatoModelos #encabezado #descripcion .detalleModelos {
@@ -604,7 +537,6 @@ main#mainNosotros {
   }
 }
 
-/*Se coloca afuera porque se repite en dos div*/
 @media (max-width: 480px) {
   #encabezado #descripcion .subtituloModelos, #encabezado #precio .subtituloModelos {
     font-size: 16px;

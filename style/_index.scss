@@ -1,5 +1,4 @@
 /*Banner Principal / Hero */
-/*Agregando Mixin / Solo para el Desafio*/
 @mixin textoProperties ($weight, $color) {
    font-weight: $weight;
    color: $color; 
@@ -34,8 +33,6 @@
       position: relative;
       font-family: 'Lato', sans-serif;
       @include textoProperties (900,$color-fuente-banner);
-      /*font-weight: 900;
-      color: $color-fuente-banner;*/
       line-height: 70%;
       @media(max-width:480px){
          top: 140px;
@@ -62,8 +59,6 @@
         text-align: center;
         font-family: 'Lato', sans-serif;
         @include textoProperties (700,$color-fuente-texto);
-        /*font-weight: 700;
-        color: $color-fuente-texto;*/
         margin-top: 10px;
         margin-bottom: 10px;
         @media(max-width:480px){
@@ -135,8 +130,6 @@
              .textoTituloCategoria{
                 font-family: 'Lato', sans-serif;
                 @include textoProperties (700,$color-fuente-texto);
-                /*font-weight: 700;
-                color: $color-fuente-texto;*/
                 @media(max-width:480px){
                   font-size: 16px;
                 }
@@ -150,8 +143,6 @@
              .textoDescriptivo{
                 font-family: 'Lato', sans-serif;
                 @include textoProperties (400, $color-fuente-texto);
-                /*font-weight: 400;
-                color: $color-fuente-texto;*/
                 margin-bottom: 5px;  
                 @media(max-width:480px){
                   font-size: 16px;

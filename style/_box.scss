@@ -2,7 +2,6 @@
 .formatoModelos{
     display: flex;
     justify-content: start;
-    /*flex-wrap: wrap;*/
     gap: 10px;
     margin: 15px 0px 5px 15px;
     #foto{
@@ -29,7 +28,6 @@
     #encabezado{
         display: flex;
         flex-direction: column;
-        /*align-items: center;*/
         flex-wrap: wrap;
         #descripcion{
             .tituloModelos{
@@ -103,7 +101,6 @@
         }
     }
 }
-/*Se coloca afuera porque se repite en dos div*/
    #encabezado{
       #descripcion, #precio{
          .subtituloModelos{

@@ -17,7 +17,6 @@ header{
    z-index: 1000;
 }
 
-/*Modificando nuevo var de BootStrap*/
 .navbar-collapse{
     justify-content: center;
 }
@@ -38,52 +37,6 @@ header{
 .navbar-toggler{
     background-color: #0014ff12;
 }
-
-/* No se usa, se aplicó BootStrap
-nav{
-    text-align: center;
-    ul{
-        list-style-type: none;
-        li{
-            display: inline-block;
-            &:hover{
-                transform: scale(1.1);
-                transition: all 0.5s;
-            }
-            a{
-                text-decoration: none;
-                font-family: 'Lato', sans-serif;
-                font-weight: 400;
-                color: $color-fuente-hf;
-                padding: 15px;
-                margin-left: 10px;
-                margin-right: 10px;
-                &:hover{
-                    color: black;
-                }
-                
-                @media(max-width:480px){
-                    font-size: 16px;
-                    padding: 3px;
-                    margin-left: 0px;
-                    margin-right: 0px;
-                }
-                @media(min-width:481px){
-                    font-size: 18px;
-                    padding: 3px;
-                    margin-left: 0px;
-                    margin-right: 0px;
-                }
-                @media(min-width:781px){
-                    font-size: 20px;
-                    padding: 15px;
-                    margin-right: 10px;  
-                }
-            }
-        }
-    }
-}
-*/
 
 .logo{
    width: 75px;
@@ -106,7 +59,7 @@ nav{
    }
 }
 
-/*inicio MAIN*/
+/*Inicio MAIN*/
 main{
     min-height: calc(100vh - 185px);
     margin-top: 120px;
@@ -133,19 +86,6 @@ footer{
         margin-left: 10px;   
      }
  }
- /*mapas -- Se colocó provisional para el desafío, luego se elimina*/
- $textos: (
-    Footer: rgb(194, 248, 194),
-    Contacto: rgb(243, 168, 168),
- );
- @each $text, $fontColor in $textos {
-    .texto#{$text}{
-        background-color: $fontColor;
-
-    }
- }
- /*--------*/
-
  main{
     @media(max-width:480px){
         min-height: calc(100vh - 160px);
