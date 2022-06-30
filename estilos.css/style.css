@@ -92,14 +92,57 @@ main {
 footer {
   background-color: white;
   padding: 25px 0 25px 0;
-  display: block;
+  /*display: block;*/
+  display: flex;
+  margin-top: 10px;
+}
+footer a {
+  text-decoration: none;
+  color: rgb(109, 106, 106);
 }
 footer .textoFooter {
   font-family: "Lato", sans-serif;
-  font-size: 12px;
   font-weight: 400;
   color: rgb(109, 106, 106);
-  margin-left: 10px;
+  margin-left: 5px;
+  margin-bottom: 0;
+  align-self: center;
+}
+@media (max-width: 480px) {
+  footer .textoFooter {
+    font-size: 10px;
+  }
+}
+@media (min-width: 481px) {
+  footer .textoFooter {
+    font-size: 12px;
+  }
+}
+@media (min-width: 781px) {
+  footer .textoFooter {
+    font-size: 14px;
+  }
+}
+footer .logoInsta {
+  margin-left: 5px;
+}
+@media (max-width: 480px) {
+  footer .logoInsta {
+    width: 20px;
+    height: 20px;
+  }
+}
+@media (min-width: 481px) {
+  footer .logoInsta {
+    width: 25px;
+    height: 25px;
+  }
+}
+@media (min-width: 781px) {
+  footer .logoInsta {
+    width: 30px;
+    height: 30px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -350,6 +393,10 @@ footer {
 }
 
 /*Sección Nosotros/Envios*/
+.bloqueContenedor {
+  text-align: center;
+  margin-right: 10px;
+}
 .bloqueContenedor .textoSubtitulos {
   font-family: "Lato", sans-serif;
   font-weight: 700;
@@ -392,6 +439,28 @@ footer {
 @media (min-width: 781px) {
   .bloqueContenedor .textoDescriptivoNos {
     font-size: 20px;
+  }
+}
+.bloqueContenedor .FotoNosotros {
+  border-radius: 5px;
+  margin: 10px;
+}
+@media (max-width: 480px) {
+  .bloqueContenedor .FotoNosotros {
+    width: 150px;
+    height: 150px;
+  }
+}
+@media (min-width: 481px) {
+  .bloqueContenedor .FotoNosotros {
+    width: 225px;
+    height: 225px;
+  }
+}
+@media (min-width: 781px) {
+  .bloqueContenedor .FotoNosotros {
+    width: 300px;
+    height: 300px;
   }
 }
 
@@ -686,6 +755,29 @@ main#mainEnvios {
 /*Sección contacto*/
 .marginForm {
   margin-left: 10px;
+}
+
+.textoSubtitulos {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  color: rgb(26, 25, 25);
+  margin-top: 5px;
+  margin-left: 10px;
+}
+@media (max-width: 480px) {
+  .textoSubtitulos {
+    font-size: 18px;
+  }
+}
+@media (min-width: 481px) {
+  .textoSubtitulos {
+    font-size: 20px;
+  }
+}
+@media (min-width: 781px) {
+  .textoSubtitulos {
+    font-size: 22px;
+  }
 }
 
 .btn-primary {

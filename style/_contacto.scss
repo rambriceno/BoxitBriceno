@@ -2,6 +2,22 @@
  .marginForm{
     margin-left: 10px;
  }
+ .textoSubtitulos{
+   font-family: 'Lato', sans-serif;
+   font-weight: 700;
+   color: $color-fuente-texto;
+   margin-top: 5px;
+   margin-left: 10px;
+   @media(max-width:480px){
+      font-size: 18px;
+   }
+   @media(min-width:481px){
+      font-size: 20px; 
+   }
+   @media(min-width:781px){
+      font-size: 22px;
+   }
+}
  .btn-primary{
     background-color: $color-background-btn-contacto;
     border-color: $color-border-btn-contacto;
